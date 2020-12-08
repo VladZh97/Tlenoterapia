@@ -1,0 +1,212 @@
+.contact__bottom {
+background-image: url('../img/woda.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+font-size: 17px;
+position: relative;
+&::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .6);
+
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    display: flex;
+    align-items: flex-start;
+    &-cont {
+      &:first-child {
+        width: 25%;
+      }
+      width: 32%;
+      margin-right: 40px;
+      padding: 30px 0;
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+&__title {
+  font-size: 20px;
+}
+
+&__btn {
+  width: 30%;
+}
+
+&__icons {
+  margin-top: 10px;
+}
+
+&__face {
+  margin-right: 7px;
+}
+
+&__face,
+&__insta {
+
+  img {
+    transition: all .3s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+}
+}
+
+@media screen and (max-width: $lg) {
+  .contact__bottom {
+    &__left {
+      flex-wrap: wrap;
+    }
+    &__left-cont {
+      width: auto;
+      &:first-child {
+        width: auto;
+      }
+    }
+  }
+
+  .contact__bottom__btn {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: $md - 1px) {
+  .contact__bottom {
+    &__left {
+      &-cont {
+        margin: 0;
+        padding: 15px 0;
+      }
+    }
+  }
+
+  .contact__bottom__btn {
+    width: 130%;
+  }
+}
+
+@media screen and (max-width: $sm - 1px) {
+  .contact__bottom__inner,
+  .contact__bottom__left {
+    flex-direction: column;
+  }
+  
+
+  .contact__bottom__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  height: 80px;
+  background-color: #1a1a1a;
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    font-weight: 300;
+  }
+
+  &__copy,
+  &__policy,
+  &__info {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  &__seo {
+    margin-top: 12px;
+  }
+
+   .tworzenie_stron_www,
+   .tworzenie_stron_www2 {
+    color: #746F6F;
+    font-size: 12px;
+  }
+
+  &__policy {
+    margin-right: 15px;
+  }
+
+&__policy,
+&__info {
+  &:hover {
+  color: #999;
+  }
+}
+
+.tworzenie_stron_www,
+.tworzenie_stron_www2 {
+  &:hover {
+    color: #eee;
+  }
+}
+
+}
+
+
+@media screen and (max-width: 1450px) {
+  .contact-footer {
+  
+    &::after {
+  opacity: .2;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .contact-footer {
+  &__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  &__right {
+    margin-top: 60px;
+  }
+  &__left {
+    margin-right: 0;
+  }
+  &__inputs {
+    display: flex;
+    justify-content: center;
+  }
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .footer__copy {
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+    line-height: 17px;
+  }
+  .footer__seo {
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,268 @@
+.contact {
+  &__inner {
+    padding-top: 71px;
+    position: relative;
+
+  }
+
+  &__container-page {
+    position: relative;
+    &::before {
+      content: url('../img/graf6.png');
+      position: absolute;
+      top: 200px;
+      left: 4%;
+      z-index: -1;
+    }
+    &::after {
+      content: url('../img/graf7.png');
+      position: absolute;
+      bottom: 150px;
+      right: 6%;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 70px;
+      font-weight: 700;
+  }
+
+  &__items {
+    margin-top: 73px;
+    padding-bottom: 70px;
+
+  }
+
+  &__left,
+  &-form__title {
+    font-size: 18px;
+    line-height: 30px;
+    p {
+      line-height: 25px;
+      margin: 0;
+    }
+  }
+
+
+  &-footer__title {
+    font-weight: 700;
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  &-footer__text {
+    max-width: 70%;
+  }
+  &__mail-text {
+    margin-top: 25px;
+    span, a{
+    display: block;
+    font-weight: 700;
+    
+    }
+  }
+
+  &-footer__inputs {
+    display: flex;
+  }
+
+  &__newsletter {
+    margin-right: 0;
+  }
+
+  &__right {
+    max-width: 370px;
+    p {
+      margin: 0;
+    }
+  }
+}
+.contact-form__title {
+  text-align: center;
+  margin: 0;
+}
+
+.contact-footer__tel,
+.contact-footer__mail {
+  &:hover {
+    color: #0054A3;
+  }
+}
+.contact-footer__icons {
+  margin-top: 15px;
+}
+.contact-footer__face {
+  margin-right: 5px;
+}
+
+input.wpcf7-text,
+textarea,
+.wpcf7-select,
+.wpcf7-validates-as-date {
+  position: relative;
+  width: 100% !important;
+height: 39px;
+border-radius: 20px;
+box-shadow: 0 0 10px 4px rgba(0,0,0,0.11);
+border: none;
+font-size: 13px;
+font-weight: 300;
+padding: 0 22px;
+margin-top: 13px;
+font-family: $mainFont;
+
+&::placeholder {
+  text-transform: uppercase;
+  color: rgb(128, 128, 128);
+}
+}
+
+.wpcf7-validates-as-date input::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+	content: "Dates souhaitées";
+	margin-right: 10px;
+}
+
+textarea {
+  padding-top: 10px;
+  min-height: 176px;
+  resize: none;
+}
+
+.contactp__accept {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 300;
+  margin-top: 24px;
+}
+
+
+
+span.wpcf7-list-item {
+label {
+  display: flex;
+  input {
+    margin-right: 9px;
+  }
+}
+&:last-child {
+  margin-top: 13px !important;
+}
+}
+.submit__btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.wpcf7-submit {
+  @include btn;
+  border: none;
+}
+
+
+#map {
+  height: 500px;
+}
+.fas.fa-map-marker-alt {
+  animation-duration: .4s;
+  animation-name: jump;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+  animation-play-state: running; 
+}
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+
+@media screen and (max-width: $xl) {
+  .contact {
+  &__container-page {
+    &::after {
+      bottom: 90px;
+      right: -90px;
+    }
+  }
+}
+}
+
+@media screen and (max-width: $lg) {
+  .contact-footer__text {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: $md) {
+  .contact {
+    &__right,
+    &__left {
+      margin: 0 auto;
+      text-align: center;
+    }
+    &__right {
+      margin-top: 70px;
+    }
+
+    &__newsletter {
+      .contact-footer__inputs {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .contactp__accept {
+    text-align: left;
+  }
+  #map {
+    height: 350px;
+  }
+}
+
+
+@media screen and (max-width: $sm) {
+  .contact-footer {
+    &__inputs {
+    flex-direction: column;
+  }
+  &__input {
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__news-btn {
+    margin-right: 5%;
+    margin-top: 25px;
+    align-self: flex-end;
+  }
+}
+.contact {
+  &__container-page {
+    &::after {
+      bottom: 30px;
+    }
+  }
+}
+}
+@media screen and (max-width: 410px) {
+  .contact-footer {
+
+  &__input {
+    width: 100%;
+  }
+  &__news-btn {
+    margin-right: 0;
+  }
+}
+}
+
+

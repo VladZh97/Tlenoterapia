@@ -1,0 +1,15 @@
+@mixin  btn {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  background-color: $accent;
+  padding: 11px 25px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  transition: all .3s ease-in-out;
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.19);
+    transform: translateY(-3px);
+  }
+}

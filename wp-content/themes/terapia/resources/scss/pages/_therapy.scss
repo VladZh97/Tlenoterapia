@@ -1,0 +1,171 @@
+.therapy {
+  &__main {
+    padding: 100px 0 0;
+  }
+  &__title {
+    padding: 40px 0 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 23px;
+    max-width: 80%;
+    margin: 40px auto 0;
+  }
+}
+
+
+
+.timeline{
+	position:relative;
+	width:900px;
+	padding:20px;
+	display:flex;
+	justify-content:center;
+  align-items:center;
+  margin: 0 auto 80px;
+  &__title {
+    margin: 74px 0 53px;
+  }
+}
+.timeline:before{
+	content: '';
+	position:absolute;
+	left: calc(50% - 1.5px);
+	transform:translateX(calc(50% - 1.5px));
+	height:100%;
+border-right: 3px dashed #205D97;
+// z-index: -1;
+}
+.timeline ul{
+	list-style-type:none;
+}
+.timeline ul li{
+  position: relative;
+	width:50%;
+	padding:5px 45px 40px 5px;
+  cursor:pointer;
+  display: flex;
+  flex-direction: column;
+}
+.timeline ul li:nth-child(odd):before{
+	content:'';
+	position:absolute;
+	width:30px;
+	height:30px;
+	background-color:#56A4DA;
+	border-radius:50%;
+	left:-35px;
+	top:12px;
+	transition:.5s;
+}
+.timeline ul li:nth-child(even):before{
+	content:'';
+	position:absolute;
+	width:30px;
+	height:30px;
+	background-color:#56A4DA;
+	border-radius:50%;
+	right: 5px;
+	top:12px;
+	transition:.5s;
+}
+.timeline ul li:hover:before{
+	box-shadow:0px 0px 5px 2px #56A4DA;
+}
+.timeline ul li:nth-child(odd){
+	float:right;
+	text-align:left;
+	clear:both;
+}
+.timeline ul li:nth-child(even){
+	float:left;
+	text-align:right;
+	clear:both;
+}
+.timeline ul li:nth-child(even) .time{
+  align-self: flex-end;
+	text-align:left;
+  padding-left:10px;
+  font-size: 18px;
+}
+.timeline ul li:nth-child(odd) .time{
+
+  padding-right:10px;
+  font-size: 18px;
+}
+.timeline ul li .content p{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.time {
+  span {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .timeline{
+    width:auto;
+  }
+}
+@media screen and (max-width:768px){
+  .therapy__text {
+
+    max-width: 100%;
+  }
+	.timeline{
+		width:100%;
+	}
+	.timeline:before{
+		left:20px;
+	}
+	.timeline ul li{
+		width:100%;
+		padding:3px 0px 40px 20px;
+		cursor:pointer;
+	}
+	.timeline ul li:nth-child(even):before{
+		left:-54px;
+	}
+	.timeline ul li:nth-child(odd):before{
+		left:-54px;
+	}
+	.timeline ul li:nth-child(even){
+		float:left;
+		text-align:left;
+	}
+	.timeline ul li:nth-child(odd){
+		float:left;
+		text-align:left;
+	}
+	.timeline ul li:nth-child(odd) .time{
+		position:static;
+		text-align:left;
+		padding-left:20px;
+		box-shadow:0px 0px 0px 0px ;
+	}
+	.timeline ul li:nth-child(even) .time{
+		position:static;
+		text-align:left;
+		padding-left:20px;
+    box-shadow:0px 0px 0px 0px ;
+    align-self: flex-start;
+  }
+
+}
+
+@media screen and (max-width: $sm) {
+  .therapy__text {
+
+   padding-left: 10px;
+  }
+}

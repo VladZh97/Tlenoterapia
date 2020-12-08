@@ -1,0 +1,29 @@
+html {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+body {
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+	min-height: 100vh;
+}
+h1 {
+	text-transform: uppercase;
+}
+
+button,
+a {
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+}
